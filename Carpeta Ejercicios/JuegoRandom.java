@@ -6,12 +6,18 @@ import java.util.Scanner;
 public class JuegoRandom {
     public static void main(String[] args) {
         int numeroSecreto = new Random().nextInt(100) + 1;
+
         Scanner scan = new Scanner(System.in);
+
         System.out.println("Introduce el siguiente número: ");
+
         int miNumero = scan.nextInt();
+
         int numeroDeIntentos = 2;
+
         boolean terminado = false;
-        while (!terminado) {
+
+        do {
             if (miNumero != numeroSecreto) {
                 if (numeroDeIntentos == 0) {
                     System.out.println("Has perdido");
@@ -29,8 +35,8 @@ public class JuegoRandom {
                 System.out.println("El número es el correcto");
                 terminado = true;
             }
-
         }
+        while (!terminado);
     }
 }
 
